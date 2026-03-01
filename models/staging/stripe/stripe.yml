@@ -1,0 +1,9 @@
+version: 2
+#documento para rastrear as fontes de dados
+sources:
+  - name: stripe
+    database: raw
+    schema: stripe
+    tables:
+      - name: payments
+        description: Tabela de pagamentos brutos da Stripe

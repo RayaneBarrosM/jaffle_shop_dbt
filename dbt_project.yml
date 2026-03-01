@@ -8,9 +8,6 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-seeds:
-  +jaffle_shop: 
-    
 
 models:
   jaffle_shop:  
