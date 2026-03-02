@@ -1,9 +1,5 @@
-with
-
-source as (
-
-    -- {# This references seed (CSV) data - try switching to {{ source('ecom', 'raw_stores') }} #}
-    select * from {{ ref('raw_stores') }}
+with source as (
+    select * from {{ source('jaffle_shop', 'raw_stores') }} 
 
 ),
 

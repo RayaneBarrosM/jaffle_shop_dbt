@@ -14,5 +14,9 @@ models:
     +static_analysis: strict
     staging:
       +materialized: view
+      jaffle_shop:
+        +schema: jaffle_shop
+      stripe:
+        +schema: stripe 
     marts:
       +materialized: table
