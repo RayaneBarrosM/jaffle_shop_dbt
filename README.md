@@ -17,7 +17,7 @@ Para cada arquivo CSV (customers, orders, payments, etc.):
 
 1. No Databricks, clique em **"New"** > **"Add or upload data"**
 2. Selecione **"Create or modify a table"**
-3. Escolha o catálogo `raw` e o schema `jaffle_shop` (para dados da loja) ou `stripe` (para pagamentos)
+3. Escolha o catálogo `raw` e crie o schema `jaffle_shop` (para dados da loja) ou `stripe` (para pagamentos)
 4. Nomeie a tabela conforme o arquivo (ex: `raw_customers`, `raw_orders`)
 5. Repita para todos os arquivos
 
