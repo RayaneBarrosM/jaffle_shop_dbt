@@ -11,7 +11,7 @@ Este documento descreve o processo completo de configuração de um ambiente de 
 - **dbt Fusion** (motor de transformação)
 
 
-### ** 1. Upload dos Dados Brutos (CSV)**
+###  1. Upload dos Dados Brutos (CSV)
 
 Para cada arquivo CSV (customers, orders, payments, etc.):
 
