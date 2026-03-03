@@ -49,7 +49,7 @@ Para erificar instalação, feche e abra o powerShell
 ```
 dbtf --version
 ```
-4. Criação do Projeto dbt
+### **4. Criação do Projeto dbt**
 
 - Navegue até a pasta de projetos
 - Inicie com `dbtf init`
@@ -65,7 +65,7 @@ dbtf --version
 | `Authentication method` | `Personal Access Token` |
 | `Personal Access Token` | [cole o token gerado] |
 
-5. Configuração dos Arquivos YAML
+### **5. Configuração dos Arquivos YAML**
 O arquivo de perfil é criado automaticamente em `C:\Users\SeuUsuario\.dbt\profiles.yml`:
 ```
 jaffle_shop:
@@ -81,13 +81,13 @@ jaffle_shop:
       threads: 4
 ```
 
-6. Testar a Conexão
+### **6. Testar a Conexão**
 ```
 cd C:\...\jaffle_shop
 dbtf debug
 ```
 
-7. Executar os Modelos
+### **7. Executar os Modelos**
 ```
 dbtf run
 ```
