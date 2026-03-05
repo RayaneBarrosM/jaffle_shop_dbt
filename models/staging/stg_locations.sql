@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('jaffle_shop', 'raw_stores') }} 
+    select * from {{ source('ecom', 'raw_stores') }} 
 
 ),
 
