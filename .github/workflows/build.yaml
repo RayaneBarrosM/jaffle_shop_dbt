@@ -9,7 +9,7 @@ on:
         - cron: '0 5 * * *'        
 
 env:    
-    DBT_PROFILES_DIR: ~/.dbt
+    DBT_PROFILES_DIR: /home/runner/.dbt 
     PYTHON_VERSION: '3.10'
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
         - name: Install dbt
           run: pip install dbt-databricks    
 
-        - name: Login to DataBricks    
+        - name: Login to DataBricks and file  
           env:
             DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
             DATABRICKS_HTTP_PATH: ${{ secrets.DATABRICKS_HTTP_PATH }}
@@ -37,7 +37,7 @@ jobs:
             DATABRICKS_CATALOG: ${{ secrets.DATABRICKS_CATALOG }}
             DATABRICKS_SCHEMA: ${{ secrets.DATABRICKS_SCHEMA }}
           run: |
-            #Cria arquivo profiles.yml com o conteúdo entre EOF e EOF
+            # Cria arquivo profiles.yml com o conteúdo entre EOF e EOF
             mkdir -p ${{ env.DBT_PROFILES_DIR }}
             cat > ${{ env.DBT_PROFILES_DIR }}/profiles.yml << EOF
             jaffle_shop:
@@ -52,6 +52,8 @@ jobs:
                     schema: ${{ env.DATABRICKS_SCHEMA }}
                     threads: 4
             EOF   
+
+            echo "Arquivo profiles.yml criado em: ${{ env.DBT_PROFILES_DIR }}"
             
         - name: Run dbt deps
           run: dbt deps    
