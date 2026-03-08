@@ -51,7 +51,7 @@ jobs:
                   catalog: ${{ env.DATABRICKS_CATALOG }}
                   schema: ${{ env.DATABRICKS_SCHEMA }}
                   threads: 4
-            EOF   
+            EOF
 
             echo "Arquivo profiles.yml criado em: ${{ env.DBT_PROFILES_DIR }}"
             
