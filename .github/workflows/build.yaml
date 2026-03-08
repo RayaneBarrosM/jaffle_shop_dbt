@@ -39,19 +39,19 @@ jobs:
           run: |
             # Cria arquivo profiles.yml com o conteúdo entre EOF e EOF
             mkdir -p ${{ env.DBT_PROFILES_DIR }}
-            cat > ${{ env.DBT_PROFILES_DIR }}/profiles.yml << EOF
+            cat > ${{ env.DBT_PROFILES_DIR }}/profiles.yml <<'EOF'
             jaffle_shop:
-                target: dev
-                outputs:
-                  dev:
-                    type: databricks
-                    host: ${{ env.DATABRICKS_HOST }}
-                    http_path: ${{ env.DATABRICKS_HTTP_PATH }}
-                    token: ${{ env.DATABRICKS_TOKEN }}
-                    catalog: ${{ env.DATABRICKS_CATALOG }}
-                    schema: ${{ env.DATABRICKS_SCHEMA }}
-                    threads: 4
-            EOF   
+              target: dev
+              outputs:
+                dev:
+                  type: databricks
+                  host: ${{ env.DATABRICKS_HOST }}
+                  http_path: ${{ env.DATABRICKS_HTTP_PATH }}
+                  token: ${{ env.DATABRICKS_TOKEN }}
+                  catalog: ${{ env.DATABRICKS_CATALOG }}
+                  schema: ${{ env.DATABRICKS_SCHEMA }}
+                  threads: 4
+            EOFv   
 
             echo "Arquivo profiles.yml criado em: ${{ env.DBT_PROFILES_DIR }}"
             
