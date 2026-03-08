@@ -43,7 +43,7 @@ jobs:
             jaffle_shop:
                 target: dev
                 outputs:
-                dev:
+                  dev:
                     type: databricks
                     host: ${{ env.DATABRICKS_HOST }}
                     http_path: ${{ env.DATABRICKS_HTTP_PATH }}
