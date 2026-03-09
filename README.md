@@ -271,5 +271,7 @@ dbt docs serve
 
 
 Projeto configurado em: 08/03/2026
+
 Versão do dbt Fusion: 2.0.0-preview.126
+
 Plataforma de dados: Databricks
