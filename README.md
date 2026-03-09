@@ -244,7 +244,7 @@ Para acompanhar a execução:
 
 ----
 
-📊 Verificando os Resultados
+## 📊 Verificando os Resultados
 
 No Databricks: Verificar se as tabelas foram criadas/atualizadas:
 
@@ -261,7 +261,7 @@ dbt docs generate
 dbt docs serve
 ```
 ----
-# Outros conceitos Importantes utilizados no projeto
+## Outros conceitos Importantes utilizados no projeto
 | **Conceito** | **O que é** | **Por que importa** |
 | --- | --- | --- |
 | **Source** | Tabelas brutas no warehouse | Centraliza a configuração e documentação dos dados de origem |
